@@ -15,7 +15,7 @@ from tools.tools import get_profile_url_tavily
 def lookup(name: str) -> str:
     llm = ChatOpenAI(
         temperature=0,
-        model_name="gpt-3.5-turbo",
+        model_name="gpt-4o-mini",
     )
     template = """
        given the name {name_of_person} I want you to find a link to their Twitter profile page, and extract from it their username

@@ -24,7 +24,7 @@ def ice_break_with(name: str) -> Tuple[Summary, str]:
     given the information about a person from linkedin {information},
     and their latest twitter posts {twitter_posts} I want you to create:
     1. A short summary
-    2. two interesting facts about them 
+    2. two interesting facts about them
 
     Use both information from twitter and Linkedin
     \n{format_instructions}
@@ -37,7 +37,7 @@ def ice_break_with(name: str) -> Tuple[Summary, str]:
         },
     )
 
-    llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo")
+    llm = ChatOpenAI(temperature=0, model_name="gpt-4o-mini")
 
     chain = summary_prompt_template | llm | summary_parser
 
